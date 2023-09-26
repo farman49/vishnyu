@@ -17,7 +17,7 @@ phases:
       - docker --version
       - ls -l 
       - pwd
-      - docker build -build-arg N8N_VERSION=1.7.1 -t $REPOSITORY_URI .
+      - docker build --build-arg N8N_VERSION=1.7.1 -t $REPOSITORY_URI .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
